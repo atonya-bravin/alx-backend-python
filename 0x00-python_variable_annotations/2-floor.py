@@ -1,4 +1,4 @@
-#!usr/bin/env python3
+#!/usr/bin/env python3
 """
     This module contains a method floor that
     takes in a float number and returns its floor
