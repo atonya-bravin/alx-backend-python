@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+"""
+    This module Contains a method add that takes in two floats
+    and returns their sum
+"""
 
 
 def add(a: float, b: float) -> float:
