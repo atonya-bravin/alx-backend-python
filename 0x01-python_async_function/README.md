@@ -24,7 +24,7 @@ Some of the main requirements in this particular project include;
 11. All your functions should have a documentation `(python3 -c 'print(__import__("my_module").my_function.__doc__)'`
 12. A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
 
-##Featured tasks and solutions
+## Featured tasks and solutions
 1. Write an asynchronous coroutine that takes in an integer argument (max_delay, with a default value of 10) named wait_random that waits for a random delay between 0 and max_delay (included and float value) seconds and eventually returns it. Use the random module.
 ### solution
 
