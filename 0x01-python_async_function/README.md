@@ -42,4 +42,5 @@ print(asyncio.run(wait_random(5)))
 print(asyncio.run(wait_random(15)))
 ```
 ### Task 1 [Solution]
+**Featured File** => 0-basic_async_syntax.py
 
