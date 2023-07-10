@@ -41,5 +41,5 @@ print(asyncio.run(wait_random()))
 print(asyncio.run(wait_random(5)))
 print(asyncio.run(wait_random(15)))
 ```
-### solution
+### Task 1 [Solution]
 
