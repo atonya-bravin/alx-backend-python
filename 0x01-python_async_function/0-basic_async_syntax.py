@@ -1,4 +1,4 @@
-#!usr/bin/env python3
+#!/usr/bin/env python3
 """
 This module contains a method wait_random that returns a value
 passed to it in a random number of seconds between two numbers.
