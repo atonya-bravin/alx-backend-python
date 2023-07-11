@@ -183,3 +183,29 @@ def task_wait_random(max_delay: int) -> asyncio.Task:
 ```
 return asyncio.create_task(wait_random(max_delay))
 ```
+
+### Task 5
+Take the code from wait_n and alter it into a new function task_wait_n. The code is nearly identical to wait_n except task_wait_random is being called.
+
+**4-main.py**
+```
+#!/usr/bin/env python3
+
+import asyncio
+
+task_wait_n = __import__('4-tasks').task_wait_n
+
+n = 5
+max_delay = 6
+print(asyncio.run(task_wait_n(n, max_delay)))
+```
+#### Task 5 [Solution]
+**Featured File** => 4-tasks.py
+
+#### Task 5 [Solution Breakdown]
+- Change of the imported package and method.
+- Create a list of n tasks, leaving the work of task creation to the task_wait_random method in the 4-tasks.py module.  
+```
+concurrent_tasks = [task_wait_random(max_delay)
+                        for _ in range(n)]
+```
