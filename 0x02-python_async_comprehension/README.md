@@ -56,3 +56,34 @@ asyncio.run(print_yielded_values())
 async def async_generator() -> Generator[float, None, None]:
 ```
 - Implementation of a 1 second delay before returning a random floating point number
+
+### Task 2
+Import async_generator from the previous task and then write a coroutine called async_comprehension that takes no arguments. The coroutine will collect 10 random numbers using an async comprehensing over async_generator, then return the 10 random numbers.
+
+
+**1-main.py**
+
+```
+#!/usr/bin/env python3
+
+import asyncio
+
+async_comprehension = __import__('1-async_comprehension').async_comprehension
+
+
+async def main():
+    print(await async_comprehension())
+
+asyncio.run(main())
+```
+#### Task 2 [Solution]
+**Featured File** => 1-async_comprehension.py
+
+#### Task 2 [Solution Breakdown]
+- Importation of packages and methods to use in the solution.
+- Defination of a method **async_comprehension** that is expected to collect 10 random numbers using an async comprehensing over async_generator, then return the 10 random numbers.
+- Use of the async comprehension to iterate over the values produced by the async_generator and assigns them to the variable result. Overall, the async_comprehension function asynchronously waits for the values yielded by the async_generator and collects them into a list, which is then returned.
+```
+result = [counter async for counter in async_generator()]
+```
+- Returning of the 10 numbers in a list
