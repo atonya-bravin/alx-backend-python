@@ -124,3 +124,24 @@ concurrent_tasks = [asyncio.create_task(wait_random(max_delay))
  for task in asyncio.as_completed(concurrent_tasks):
         completed_tasks.append(await task)
 ```
+
+### Task 3
+From the previous file, import wait_n into 2-measure_runtime.py. Create a measure_time function with integers n and max_delay as arguments that measures the total execution time for wait_n(n, max_delay), and returns total_time / n. Your function should return a float. Use the time module to measure an approximate elapsed time.  
+  
+  
+**2-main.py**  
+```
+#!/usr/bin/env python3
+
+measure_time = __import__('2-measure_runtime').measure_time
+
+n = 5
+max_delay = 9
+
+print(measure_time(n, max_delay))
+```
+#### Task 1 [Solution]
+**Featured File** => 2-measure_runtime.py
+
+#### Task 1 [Solution Breakdown]
+
