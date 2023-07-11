@@ -87,3 +87,38 @@ asyncio.run(main())
 result = [counter async for counter in async_generator()]
 ```
 - Returning of the 10 numbers in a list
+
+### Task 3
+Import async_comprehension from the previous file and write a measure_runtime coroutine that will execute async_comprehension four times in parallel using asyncio.gather. measure_runtime should measure the total runtime and return it. Notice that the total runtime is roughly 10 seconds, explain it to yourself.  
+
+
+**2-main.py**
+
+```
+#!/usr/bin/env python3
+
+import asyncio
+
+
+measure_runtime = __import__('2-measure_runtime').measure_runtime
+
+
+async def main():
+    return await(measure_runtime())
+
+print(
+    asyncio.run(main())
+)
+```
+#### Task 3 [Solution]
+**Featured File** => 2-measure_runtime.py
+
+#### Task 2 [Solution Breakdown]
+- Importation of packages and methods to use in the solution.
+- Defination of a method **measure_runtime** that  execute async_comprehension four times in parallel using asyncio.gather, then measures and returns the total runtime.
+- Capture of the start_time before running the code
+- Use of the Python asyncio library to run the async_comprehension() function four times concurrently using the asyncio.gather() method.
+```
+await asyncio.gather(*(async_comprehension() for _ in range(4)))
+```
+- Capture of the end_time after running the code, then returning the difference(total runtime).
