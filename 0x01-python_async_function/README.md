@@ -144,4 +144,33 @@ print(measure_time(n, max_delay))
 **Featured File** => 2-measure_runtime.py
 
 #### Task 3 [Solution Breakdown]
+- Importation of the modules to be used to accomplish the task
+- Get start time before running the code in the function
+- Run the code in the function
+```asyncio.run(wait_n(n, max_delay))```
+- Get the time the process got completed
 
+### Task 4
+From the previous file, import wait_n into 2-measure_runtime.py. Create a measure_time function with integers n and max_delay as arguments that measures the total execution time for wait_n(n, max_delay), and returns total_time / n. Your function should return a float. Use the time module to measure an approximate elapsed time.
+
+
+**3-main.py**
+```
+#!/usr/bin/env python3
+
+import asyncio
+
+task_wait_random = __import__('3-tasks').task_wait_random
+
+
+async def test(max_delay: int) -> float:
+    task = task_wait_random(max_delay)
+    await task
+    print(task.__class__)
+
+asyncio.run(test(5))
+``
+#### Task 4 [Solution]
+**Featured File** => 3-tasks.py
+
+#### Task 4 [Solution Breakdown]
