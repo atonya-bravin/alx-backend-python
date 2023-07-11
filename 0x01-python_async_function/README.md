@@ -169,7 +169,7 @@ async def test(max_delay: int) -> float:
     print(task.__class__)
 
 asyncio.run(test(5))
-``
+```
 #### Task 4 [Solution]
 **Featured File** => 3-tasks.py
 
