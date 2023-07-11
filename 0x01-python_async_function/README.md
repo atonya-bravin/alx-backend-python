@@ -174,3 +174,12 @@ asyncio.run(test(5))
 **Featured File** => 3-tasks.py
 
 #### Task 4 [Solution Breakdown]
+- Importation of the packages I use to achieve the task
+- Annotation of the method with a task being expected as the return value  
+```
+def task_wait_random(max_delay: int) -> asyncio.Task:
+```
+- Returning of a newly created task
+```
+return asyncio.create_task(wait_random(max_delay))
+```
