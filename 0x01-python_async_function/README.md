@@ -41,10 +41,10 @@ print(asyncio.run(wait_random()))
 print(asyncio.run(wait_random(5)))
 print(asyncio.run(wait_random(15)))
 ```
-### Task 1 [Solution]
+#### Task 1 [Solution]
 **Featured File** => 0-basic_async_syntax.py
 
-### Task 1 [Solution Breakdown]
+#### Task 1 [Solution Breakdown]
 - In the begining of the file i imported asyncio and random, the packages that i require to solve the task.
 - I then defined a coroutine `async def wait_random(max_delay: int = 10) -> float:` which uses the python anotation. The method takes in a max_delay which is an integer and defaults to 10, returning a float.
 - I then get a random number between 0 and 10, returning that number from the function.
@@ -67,8 +67,8 @@ print(asyncio.run(wait_n(5, 5)))
 print(asyncio.run(wait_n(10, 7)))
 print(asyncio.run(wait_n(10, 0)))
 ```
-### Task 2 [Solution]
+#### Task 2 [Solution]
 **Featured File** => 1-concurrent_coroutines.py
 
-### Task 2 [Solution Breakdown]
+#### Task 2 [Solution Breakdown]
 
