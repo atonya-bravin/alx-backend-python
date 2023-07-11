@@ -48,3 +48,11 @@ asyncio.run(print_yielded_values())
 ```
 ### Task 1 [Solution]
 **Featured File** => 0-async_generator.py
+
+### Task 1 [Solution Breakdown]
+- Importation of packages and methods to use in the solution.
+- Defination of a method **async_generator**, which is expected to return a generator object that yields float values. The None represents the type of value that can be sent to the generator using the send() method, and the second None represents the type of value that can be used to raise a StopIteration exception using the throw() method.  
+```
+async def async_generator() -> Generator[float, None, None]:
+```
+- Implementation of a 1 second delay before returning a random floating point number
