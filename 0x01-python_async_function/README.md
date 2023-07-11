@@ -48,3 +48,27 @@ print(asyncio.run(wait_random(15)))
 - In the begining of the file i imported asyncio and random, the packages that i require to solve the task.
 - I then defined a coroutine `async def wait_random(max_delay: int = 10) -> float:` which uses the python anotation. The method takes in a max_delay which is an integer and defaults to 10, returning a float.
 - I then get a random number between 0 and 10, returning that number from the function.
+
+### Task 2
+Import wait_random from the previous python file that you’ve written and write an async routine called wait_n that takes in 2 int arguments (in this order): n and max_delay. You will spawn wait_random n times with the specified max_delay. wait_n should return the list of all the delays (float values). The list of the delays should be in ascending order without using sort() because of concurrency.
+
+
+**1-main.py**
+```
+#!/usr/bin/env python3
+'''
+Test file for printing the correct output of the wait_n coroutine
+'''
+import asyncio
+
+wait_n = __import__('1-concurrent_coroutines').wait_n
+
+print(asyncio.run(wait_n(5, 5)))
+print(asyncio.run(wait_n(10, 7)))
+print(asyncio.run(wait_n(10, 0)))
+```
+### Task 2 [Solution]
+**Featured File** => 1-concurrent_coroutines.py
+
+### Task 2 [Solution Breakdown]
+
