@@ -113,4 +113,14 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
 **Featured File** => 1-concurrent_coroutines.py
 
 #### Task 2 [Solution Breakdown]
-
+- Importation of the asyncio and 0-basic_async_syntax packages that I use to accomplish the task
+- Creation of a list of **n** concurrent tasks
+```
+concurrent_tasks = [asyncio.create_task(wait_random(max_delay))
+                        for _ in range(n)]
+```
+- Insertion the the concurrent tasks in the completed_tasks list according to their completition time.
+```
+ for task in asyncio.as_completed(concurrent_tasks):
+        completed_tasks.append(await task)
+```
