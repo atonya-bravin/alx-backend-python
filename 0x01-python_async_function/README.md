@@ -140,8 +140,8 @@ max_delay = 9
 
 print(measure_time(n, max_delay))
 ```
-#### Task 1 [Solution]
+#### Task 3 [Solution]
 **Featured File** => 2-measure_runtime.py
 
-#### Task 1 [Solution Breakdown]
+#### Task 3 [Solution Breakdown]
 
