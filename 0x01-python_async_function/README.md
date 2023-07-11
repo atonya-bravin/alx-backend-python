@@ -146,7 +146,7 @@ print(measure_time(n, max_delay))
 #### Task 3 [Solution Breakdown]
 - Importation of the modules to be used to accomplish the task
 - Get start time before running the code in the function
-- Run the code in the function
+- Run the code in the function  
 ```asyncio.run(wait_n(n, max_delay))```
 - Get the time the process got completed
 
